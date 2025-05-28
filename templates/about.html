@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
+  <title>About this Data</title>
+</head>
+<style>
+  body {
+      background-color: #2d2b74;
+  }
+</style>
+<body>
+  {% include 'nav.html' %}
+  <div class="flex flex-col items-center justify-center text text-white py-20 w-full">
+    <h1>This used information that was gathered by the US on housing units throughout the years from 2020 to 2024. This information is important as it provides insight into which states are densely populated and which are not, and which could be populated more.</h1>
+    <h1>This lab aimed to analyze data regarding the number of housing units per state throughout the United States</h1>
+    <h1>Housing Units refers to the number of housing units in a state</h1>
+    <img src="/assets/feedback.jpg" alt="Feedback Image">
+    <h1>I tried initially to use minimal colors and simple minamlistic styling to keep the viewer engaged, through striking graphs and stylized backgrounds.</h1>
+    <h1>The prototypes revealed the importance of data visualization and indicated how focusing on aesthetics can be harmful. I learned that I should include more information and labels on my pages. In the final design, I am including a graph that would be helpful for understanding the years page.</h1>
+  </div>
+  
+  <footer>
+    All data from <a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-housing-units.html#v2024"> US Census/a>.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
+    <title>Data Journalism</title>
+    <style>
+        body {
+            background-color: #2d2b74;
+        }
+        .text {
+            color: #7c7287;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative h-screen bg-[url('/assets/bg-image.jpg')] bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-white text-shadow-lg">
+        <div class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+        {% include 'nav.html' %}
+        <div class="relative z-10 text-center">
+            <p class="text-9xl">Data Journalism</p>
+            <p class="text-lg">Housing Units in the USA</p>
+        </div>
+    </div>
+<div class="flex flex-col items-center justify-center text text-white py-20 w-full"
+     style="background: linear-gradient(to bottom,#2d2b74 #526fb4);">
+  <p class="text-3xl">Data Visualization</p>
+  <p class="text-2xl">Housing Units in the USA</p>
+</div>
+</body>
+</html>
+
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navBar = document.querySelector('.nav-menu');
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('hidden');
+    });
+</script>
