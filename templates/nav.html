@@ -1,23 +1,16 @@
-<div id="hamburger" class="absolute top-6 left-6 z-40 cursor-pointer">
-    <div class="w-6 h-0.5 bg-white rounded-full mb-1.5"></div>
-    <div class="w-6 h-0.5 bg-white rounded-full mb-1.5"></div>
-    <div class="w-6 h-0.5 bg-white rounded-full"></div>
-</div>
-<nav class="absolute top-6 inset-x-32 z-40 w-full bg-gray-800 text-white shadow-md">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-                <a href="/" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-                <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                <form action="/year" method="GET" class="inline">
-                    <select name="year" id="year_select" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900">
-                        {% for year in years %}
-                        <option value="{{ year }}">{{ year }}</option>
-                        {% endfor %}
-                    </select>
-                    <input type="submit" value="Submit" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-700 hover:text-white">
-                </form>
-            </div>
+<nav class="absolute top-6 left-6 z-50 w-full text-white shadow-md bg-transparent">
+    <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4">
+            <a href="/" class="rounded-md px-3 py-2 text-sm font-medium text-white" aria-current="page">Data Journalism: Housing Units in the USA</a>
+            <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+            <form action="/year" method="GET" class="inline">
+                <select name="year" id="year_select" class="rounded-md px-3 py-2 text-sm font-medium">
+                    {% for year in years %}
+                    <option value="{{ year }}">{{ year }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Submit" class="rounded-md px-3 py-2 text-sm font-medium hover:text-white">
+            </form>
         </div>
     </div>
 </nav>

@@ -7,35 +7,38 @@
     <title>Data Journalism</title>
     <style>
         body {
-            background-color: #2d2b74;
+            background-color: #403A55;
+            filter: saturate(50%);
         }
         .text {
-            color: #7c7287;
+            color: #D5C5C8;
         }
     </style>
 </head>
 <body>
-    <div class="relative h-screen bg-[url('/assets/bg-image.jpg')] bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-white text-shadow-lg">
-        <div class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
-        {% include 'nav.html' %}
-        <div class="relative z-10 text-center">
-            <p class="text-9xl">Data Journalism</p>
-            <p class="text-lg">Housing Units in the USA</p>
+    <div class="relative items-center justify-center overflow-hidden">
+        
+
+        <div class="relative z-10 text-center text justify-center flex flex-col">
+            {% include 'nav.html' %}
+            <div class="flex flex-col top-20px">
+                <p text="text-9xl">Data Journalism: Housing Units in the USA</p>
+                <div class="flex flex-col justify-center items-center text-center text" id="line_graph_all">
+                    <p class="text-8xl">Housing Units in the United States</p>
+                    {% include 'line_graph.html' %}
+                </div>
+                <div class="flex flex-col justify-center items-center text-center text">
+                    <p class="text-6xl">Take Aways</p>
+                    <p class="text-xl">If I did this again, I would focus less on the CSS of one page, so I could have made every page look better.</p>
+                    <p class="text-xl">I would have liked to add more information and used more contrastive colors, so the page could be more understandable.</p>
+                    <p class="text-xl">I would have added more dynamic text, so the information could be presented more precisely.</p>
+                    <p class="text-6xl">Interpretations</p>
+                    <p class="text-xl">The middle region of the United States has little housing units compared to the coasts.</p>
+                    <p class="text-xl">The number of houses has been consistently increasing, indicating more people want houses.</p>
+                    <p class="text-xl">The dataset is not as insightful, as I hoped. This is because states like Texas clearly have more houses due to its much larger land mass.</p>
+                </div>
+            </div>
         </div>
     </div>
-<div class="flex flex-col items-center justify-center text text-white py-20 w-full"
-     style="background: linear-gradient(to bottom,#2d2b74 #526fb4);">
-  <p class="text-3xl">Data Visualization</p>
-  <p class="text-2xl">Housing Units in the USA</p>
-</div>
 </body>
 </html>
-
-
-<script>
-    const hamburger = document.querySelector('.hamburger');
-    const navBar = document.querySelector('.nav-menu');
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('hidden');
-    });
-</script>

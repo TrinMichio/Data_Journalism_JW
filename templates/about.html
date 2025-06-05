@@ -7,22 +7,40 @@
 </head>
 <style>
   body {
-      background-color: #2d2b74;
+      background-color: #403A55;
+  }
+  .text {
+    color: #D5C5C8 !important;
   }
 </style>
 <body>
-  {% include 'nav.html' %}
-  <div class="flex flex-col items-center justify-center text text-white py-20 w-full">
-    <h1>This used information that was gathered by the US on housing units throughout the years from 2020 to 2024. This information is important as it provides insight into which states are densely populated and which are not, and which could be populated more.</h1>
-    <h1>This lab aimed to analyze data regarding the number of housing units per state throughout the United States</h1>
-    <h1>Housing Units refers to the number of housing units in a state</h1>
-    <img src="/assets/feedback.jpg" alt="Feedback Image">
-    <h1>I tried initially to use minimal colors and simple minamlistic styling to keep the viewer engaged, through striking graphs and stylized backgrounds.</h1>
-    <h1>The prototypes revealed the importance of data visualization and indicated how focusing on aesthetics can be harmful. I learned that I should include more information and labels on my pages. In the final design, I am including a graph that would be helpful for understanding the years page.</h1>
+    <div class="relative h-screen bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-shadow-lg overflow-hidden">
+        <div class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+        {% include 'nav.html' %}
+        <div class="relative z-10 text-center text">
+            <p class="text-9xl">About</p>
+            <p class="text-lg">Outline and Takeaways</p>
+        </div>
+    </div>
+  <div class="flex flex-col items-center justify-center text text-center text-white py-20 w-full">
+    <img src="assets/feedback.jpg" alt="Feedback">
+    <ul>
+      <li>This used information that was gathered by the US on housing units throughout the years from 2020 to 2024. This information is important as it provides insight into which states are densely populated and which are not, and which could be populated more.</li>
+      <li>This lab aimed to analyze data regarding the number of housing units per state throughout the United States</li>
+      <li>Housing Units refers to the number of housing units in a state</li>
+      <li>I tried initially to use minimal colors and simple minamlistic styling to keep the viewer engaged, through striking graphs and stylized backgrounds.</li>
+      <li>The prototypes revealed the importance of data visualization and indicated how focusing on aesthetics can be harmful. I learned that I should include more information and labels on my pages. In the final design, I am including a graph that would be helpful for understanding the years page.</li>
+      <li>An important vocab is housing units, which is a house, an apartment, a mobile home or trailer, a group of rooms, or a single room occupied as separate living quarters, or if vacant, intended for occupancy as separate living quarters.</li>
+    </ul>
   </div>
-  
-  <footer>
-    All data from <a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-housing-units.html#v2024"> US Census/a>.
-  </footer>
+  <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">All data from <a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-housing-units.html#v2024"class="hover:underline" >US Census</a>
+    </span>
+    </div>
+</footer>
+    <footer class="text-center py-4 text">
+        
+    </footer>
 </body>
 </html>

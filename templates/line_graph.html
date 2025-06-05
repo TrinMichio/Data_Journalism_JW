@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+     <text x="20" y="100" font-size="8" transform="rotate(-90, 30, 100)" fill="#D5C5C8">Housing Units (Units)</text>
+     <text x="455" y="484" font-size="8" fill="#D5C5C8">Year</text>
+     <line x1="15" y1="20" x2="15" y2="484" stroke="#D5C5C8" stroke-width="1" />
+     <line x1="15" y1="484" x2="450" y2="484" stroke="#D5C5C8" stroke-width="1" />
+     <polyline class="lines" stroke="#D5C5C8"
+     points="
+     {% for point in mapped_data_US %}
+          {{15 + loop.index0 * 87}},{{490-point}}
+     {% endfor %}"
+     />
+     <polyline class="lines" stroke="green"
+     points="
+     {% for point in mapped_data_N %}
+          {{15 + loop.index0 * 87}},{{490-point}}
+     {% endfor %}"
+     />
+     <polyline class="lines" stroke="pink"
+     points="
+     {% for point in mapped_data_M %}
+          {{15 + loop.index0 * 87}},{{490-point}}
+     {% endfor %}"
+     />
+     <polyline class="lines" stroke="orange"
+     points="
+     {% for point in mapped_data_W %}
+          {{15 + loop.index0 * 87}},{{490-point}}
+     {% endfor %}"
+     />
+     <polyline class="lines" stroke="red"
+     points="
+     {% for point in mapped_data_S %}
+          {{15 + loop.index0 * 87}},{{490-point}}
+     {% endfor %}"
+     />
+
+     <text x="380" y="300" font-size="14" fill="#D5C5C8">United States</text>
+     <text x="380" y="330" font-size="14" fill="green">Northeast Region</text>
+     <text x="380" y="360" font-size="14" fill="red">South Region</text>
+     <text x="380" y="390" font-size="14" fill="orange">West Region</text>
+     <text x="380" y="420" font-size="14" fill="pink">Midwest Region</text>
+     <!-- <line x1="15" y1="484" x2="363" y2="20" stroke="black" stroke-width="1" /> -->
+
+
+    {% for i in range(5) %}
+    <line x1="{{15 + i*87}}" y1="490" x2="{{15 + i*87}}" y2="484" stroke="#D5C5C8" stroke-width="1" />
+    <text x="{{15 + i*87}}" y="497" font-size="8" fill="#D5C5C8">{{2020+i}}</text>
+    {% endfor %}
+    {% for i in range(5) %}
+    <line x1="10" y1="{{20 + mapped_dash[i]}}" x2="20" y2="{{20 + mapped_dash[i]}}" stroke="#D5C5C8" stroke-width="1" />
+    <text x="20" y="{{18 + mapped_dash[i]}}" font-size="8" fill="#D5C5C8">{{dashes[i]}}</text>
+    {% endfor %}
+
+</svg>

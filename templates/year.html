@@ -1,23 +1,33 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+    <title>Data Journalism</title>
+    <style>
+        body {
+            background-color: #403A55;
+            filter: saturate(50%);
+        }
+        .text {
+            color: #D5C5C8 !important;
+        }
+    </style>
 </head>
-<body class="bg-[#2d2b74]">
+<body class="bg-[#2d2b74] bg-center flex flex-col items-center justify-center">
     {% include 'nav.html' %}
-
-  <h1>Year - {{year}}</h1>
+    <p class="text text-8xl">Year - {{year}}</p>
 
     <div id="USA" >
-        {% include 'USA.svg' %}
+        {% include 'USA.html' %}
     </div>
 
-    <h1>Information regarding this specific year</h1>
-    <h2>Graph describing the hue of each value in the map.</h2>
+    <p class="text">The state with the highest population is {{max_key}} with {{max_val}} housing units.</p>
+    <p class="text">{{max_key}} was {{max_percent}}% of the {{us}} total number of housing units in the United States.</p>
+    <p class="text">The state with the lowest population is {{min_key}} with {{min_val}} housing units.</p>
+     <p class="text">{{min_key}} was {{min_percent}}% of the {{us}} total number of housing units in the United States.</p>
+    <p class="text">The Average Housing Units per State was {{avg}} housing units.</p>
 </body>
+
 </html>
